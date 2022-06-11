@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faculties</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .btn {
+        cursor: pointer;
+      }
+
+      .animatebtn {
+        margin-top: 20px;
+        cursor: pointer;
+      }
+
+      .box {
+        padding: 20px;
+        border: 2px solid gray;
+        margin: 10px;
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Faculty Recruitment</h1>
+    <div class="header-container">
+      <div class="header">
+        <h1>welcome to the dashboard</h1>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2pzt0BCNQTHFUlrebVpGEIIQYhzk49PtSeg&usqp=CAU"
+          alt="faculty"
+        />
+        <p>
+          This is a webpage for newly applied teachers to check their
+          information regarding the job vacancies
+        </p>
+      </div>
+      <button class="btn">click to hide/show above details</button>
+    </div>
+
+    <div>
+      <button class="animatebtn">click to animate the below list</button>
+      <div id="list1" class="box">
+        <p>applicant-name : Rajesh</p>
+        <p>applicant-age : 28</p>
+        <p>applicant-qualification : phd in AI</p>
+      </div>
+
+      <div id="list2" class="box">
+        <p>applicant-name : Roshni</p>
+        <p>applicant-age : 38</p>
+        <p>applicant-qualification : phd in DS</p>
+      </div>
+
+      <div id="list3" class="box">
+        <p>applicant-name : Ram</p>
+        <p>applicant-age : 35</p>
+        <p>applicant-qualification : phd in Maths</p>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".btn").click(function () {
+          $(".header").toggle(2000);
+        });
+
+        $(".animatebtn").click(function () {
+          $("#list1").animate({ left: "150px" });
+          $("#list2").animate({ left: "150px" });
+          $("#list3").animate({ left: "150px" });
+        });
+      });
+    </script>
+  </body>
+</html>
