@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "name": "Rajesh",
+      "qualification": "phd in AI",
+      "age": 28,
+      "subject": "AI"
+    },
+    {
+      "name": "Roshini",
+      "qualification": "phd in Data Science",
+      "age": 33,
+      "subject": "DataScience"
+    },
+    {
+      "name": "Ram",
+      "qualification": "phd in Mathematics",
+      "age": 35,
+      "subject": "ML"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applicant List AJAX</title>
+  </head>
+  <body>
+    <h1>Application List</h1>
+    <p>To view the List of applicants click the below button</p>
+    <button onclick="loadlist()">View List</button>
+    <div>
+      <ul id="list"></ul>
+    </div>
+
+    <script>
+      let result;
+
+      function writeval(data) {
+        let htmldocs = data
+          .map(
+            (el) => `<li><p>applicant name : ${el.name}</p>
+                <p>applicant qualification : ${el.qualification}</p>
+                <p>applicant age : ${el.age}</p>
+                <p>applicant subject : ${el.subject}</p></li>
+                <hr>`
+          )
+          .join("\n");
+
+        document.getElementById("list").innerHTML = htmldocs;
+      }
+
+      function loadlist() {
+        let xhttp = new XMLHttpRequest();
+        let result;
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            result = JSON.parse(this.response);
+            writeval(result.data);
+          }
+        };
+
+        xhttp.open("GET", "List.json", true);
+        xhttp.send();
+      }
+    </script>
+  </body>
+</html>
