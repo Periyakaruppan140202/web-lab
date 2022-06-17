@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="index.xsl" type="text/xsl"?>
+<Faculty>
+<FacultyList>
+<name>Ranjith</name>
+<age>35</age>
+<status>Selected</status>
+</FacultyList>
+<FacultyList>
+<name>Ajay</name>
+<age>30</age>
+<status>Not Selected</status>
+</FacultyList>
+<FacultyList>
+<name>Karan</name>
+<age>34</age>
+<status>Selected</status>
+</FacultyList>
+</Faculty>
